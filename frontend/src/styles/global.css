@@ -33,3 +33,40 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+
+/* 可视化模板：样式配置、图表渲染与快照核对 */
+.panel { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin: 12px 0; }
+.panel h3 { margin: 0 0 10px; font-size: 15px; }
+.panel h4 { margin: 14px 0 6px; font-size: 13px; }
+.panel-head { display: flex; justify-content: space-between; align-items: center; }
+.detail-panel { margin-top: 16px; }
+.detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.form-grid label, .stacked { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.form-grid label.wide { grid-column: span 2; }
+.form-grid input, .form-grid textarea, .form-grid select,
+.stacked input, .stacked textarea, .stacked select {
+  border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 12px;
+  font-family: inherit; color: #1f2937; background: #fff;
+}
+.stacked textarea, .form-grid textarea { resize: vertical; }
+.badge { border-radius: 999px; padding: 2px 10px; font-size: 12px; }
+.badge-ok { background: #e7f5ec; color: #15803d; }
+.badge-muted { background: #eef2f7; color: #64748b; }
+.hint { color: var(--muted); font-size: 12px; margin: 4px 0; }
+.warning-text { color: #b45309; font-size: 12px; margin: 4px 0; }
+.ok-text { color: #15803d; font-size: 12px; }
+.row-selected td { background: #eef5ff; }
+.chart-preview { border: 1px dashed var(--border); border-radius: 8px; padding: 10px 12px; background: #fbfdff; }
+.chart-bars { display: flex; flex-direction: column; gap: 6px; margin: 8px 0; }
+.chart-bar-row { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 8px; align-items: center; }
+.chart-label { font-size: 12px; color: var(--muted); }
+.chart-bar { display: flex; gap: 6px; align-items: center; }
+.chart-bar-fill { display: inline-block; height: 12px; border-radius: 3px; min-width: 4px; }
+.chart-bar-value { font-size: 12px; color: #334155; }
+.verify-box ul { margin: 6px 0 0; padding-left: 18px; font-size: 12px; }
+.verify-box li { margin: 2px 0; }
+@media (max-width: 960px) {
+  .detail-grid, .form-grid { grid-template-columns: minmax(0, 1fr); }
+  .form-grid label.wide { grid-column: span 1; }
+}

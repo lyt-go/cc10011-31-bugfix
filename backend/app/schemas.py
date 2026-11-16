@@ -100,6 +100,8 @@ class DataserviceEntry(BaseModel):
     field_5: str | None = None  # 调用频次限制
     field_6: str | None = None  # 缓存策略
     field_7: str | None = None  # 服务版本
+    field_8: dict[str, str] | None = None  # 字段别名（旧列名 -> 契约字段）
+    field_9: int | None = None  # 契约版本
 
 class AlarmhistoryEntry(BaseModel):
     """告警记录明细结构。"""
